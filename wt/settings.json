@@ -1,11 +1,9 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
@@ -23,8 +21,7 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -36,32 +33,49 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
-        "defaults": 
-        {
-            "colorScheme": "One Half Dark",
-            "opacity": 99
+    "profiles": {
+        "defaults": {
+            "opacity": 80,
+            "compatibility.reloadEnvironmentVariables": true,
+            "colorScheme": "Grape",
+            "bellStyle": "all",
+            "adjustIndistinguishableColors": "always",
+            "font": {
+                "face": "NotoMono NFM"
+            },
+            "useAcrylic": true
         },
-        "list": 
-        [
+        "list": [
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "name": "pwsh",
+                "source": "Windows.Terminal.PowershellCore",
+                "startingDirectory": "C:\\git"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt"
+                "name": "cmd",
+                "startingDirectory": "C:\\"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": true,
+                "name": "Windows PowerShell"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -71,13 +85,13 @@
             },
             {
                 "guid": "{03ab28fd-2dee-54fe-b7d8-092402bbf894}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Developer Command Prompt for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
             {
                 "guid": "{99e0954a-a8dd-5b90-8c9d-9d01850997e0}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Developer PowerShell for VS 2022",
                 "source": "Windows.Terminal.VisualStudio"
             },
@@ -100,37 +114,151 @@
                 "source": "VSDebugConsole"
             },
             {
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "hidden": false,
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": true,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
-            "background": "#000000",
-            "black": "#0C0C0C",
-            "blue": "#0037DA",
-            "brightBlack": "#767676",
-            "brightBlue": "#3B78FF",
-            "brightCyan": "#61D6D6",
-            "brightGreen": "#16C60C",
-            "brightPurple": "#B4009E",
-            "brightRed": "#E74856",
-            "brightWhite": "#F2F2F2",
-            "brightYellow": "#F9F1A5",
-            "cursorColor": "#FFFFFF",
-            "cyan": "#3A96DD",
-            "foreground": "#FFFFFF",
-            "green": "#13A10E",
-            "name": "Color Scheme 13",
-            "purple": "#881798",
-            "red": "#C50F1F",
-            "selectionBackground": "#FFFFFF",
-            "white": "#CCCCCC",
-            "yellow": "#C19C00"
+            "name": "Grape",
+            "black": "#2d283f",
+            "red": "#ed2261",
+            "green": "#1fa91b",
+            "yellow": "#8ddc20",
+            "blue": "#487df4",
+            "purple": "#8d35c9",
+            "cyan": "#3bdeed",
+            "white": "#9e9ea0",
+            "brightBlack": "#59516a",
+            "brightRed": "#f0729a",
+            "brightGreen": "#53aa5e",
+            "brightYellow": "#b2dc87",
+            "brightBlue": "#a9bcec",
+            "brightPurple": "#ad81c2",
+            "brightCyan": "#9de3eb",
+            "brightWhite": "#a288f7",
+            "background": "#171423",
+            "foreground": "#9f9fa1",
+            "cursorColor": "#a288f7",
+            "selectionBackground": "#493d70"
+        },
+        {
+            "name": "Duotone Dark",
+            "black": "#1f1d27",
+            "red": "#d9393e",
+            "green": "#2dcd73",
+            "yellow": "#d9b76e",
+            "blue": "#ffc284",
+            "purple": "#de8d40",
+            "cyan": "#2488ff",
+            "white": "#b7a1ff",
+            "brightBlack": "#353147",
+            "brightRed": "#d9393e",
+            "brightGreen": "#2dcd73",
+            "brightYellow": "#d9b76e",
+            "brightBlue": "#ffc284",
+            "brightPurple": "#de8d40",
+            "brightCyan": "#2488ff",
+            "brightWhite": "#eae5ff",
+            "background": "#1f1d27",
+            "foreground": "#b7a1ff",
+            "cursorColor": "#ff9839",
+            "selectionBackground": "#353147"
+        },
+        {
+            "name": "BlueBerryPie",
+            "black": "#0a4c62",
+            "red": "#99246e",
+            "green": "#5cb1b3",
+            "yellow": "#eab9a8",
+            "blue": "#90a5bd",
+            "purple": "#9d54a7",
+            "cyan": "#7e83cc",
+            "white": "#f0e8d6",
+            "brightBlack": "#201637",
+            "brightRed": "#c87272",
+            "brightGreen": "#0a6c7e",
+            "brightYellow": "#7a3188",
+            "brightBlue": "#39173d",
+            "brightPurple": "#bc94b7",
+            "brightCyan": "#5e6071",
+            "brightWhite": "#0a6c7e",
+            "background": "#1c0c28",
+            "foreground": "#babab9",
+            "cursorColor": "#fcfad6",
+            "selectionBackground": "#606060"
+        },
+        {
+            "name": "SeaShells",
+            "black": "#17384c",
+            "red": "#d15123",
+            "green": "#027c9b",
+            "yellow": "#fca02f",
+            "blue": "#1e4950",
+            "purple": "#68d4f1",
+            "cyan": "#50a3b5",
+            "white": "#deb88d",
+            "brightBlack": "#434b53",
+            "brightRed": "#d48678",
+            "brightGreen": "#628d98",
+            "brightYellow": "#fdd39f",
+            "brightBlue": "#1bbcdd",
+            "brightPurple": "#bbe3ee",
+            "brightCyan": "#87acb4",
+            "brightWhite": "#fee4ce",
+            "background": "#09141b",
+            "foreground": "#deb88d",
+            "cursorColor": "#fca02f",
+            "selectionBackground": "#1e4962"
+        },
+        {
+            "name": "SynthwaveAlpha",
+            "black": "#241b30",
+            "red": "#e60a70",
+            "green": "#00986c",
+            "yellow": "#adad3e",
+            "blue": "#6e29ad",
+            "purple": "#b300ad",
+            "cyan": "#00b0b1",
+            "white": "#b9b1bc",
+            "brightBlack": "#7f7094",
+            "brightRed": "#e60a70",
+            "brightGreen": "#0ae4a4",
+            "brightYellow": "#f9f972",
+            "brightBlue": "#aa54f9",
+            "brightPurple": "#ff00f6",
+            "brightCyan": "#00fbfd",
+            "brightWhite": "#f2f2e3",
+            "background": "#241b30",
+            "foreground": "#f2f2e3",
+            "cursorColor": "#f2f2e3",
+            "selectionBackground": "#6e29ad"
+        },
+        {
+            "name": "Tomorrow Night Burns",
+            "black": "#252525",
+            "red": "#832e31",
+            "green": "#a63c40",
+            "yellow": "#d3494e",
+            "blue": "#fc595f",
+            "purple": "#df9395",
+            "cyan": "#ba8586",
+            "white": "#f5f5f5",
+            "brightBlack": "#5d6f71",
+            "brightRed": "#832e31",
+            "brightGreen": "#a63c40",
+            "brightYellow": "#d2494e",
+            "brightBlue": "#fc595f",
+            "brightPurple": "#df9395",
+            "brightCyan": "#ba8586",
+            "brightWhite": "#f5f5f5",
+            "background": "#151515",
+            "foreground": "#a1b0b8",
+            "cursorColor": "#ff443e",
+            "selectionBackground": "#b0bec5"
         }
     ],
     "themes": []
