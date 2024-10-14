@@ -42,12 +42,12 @@
         "defaults": {
             "adjustIndistinguishableColors": "always",
             "bellStyle": "all",
-            "colorScheme": "CGA",
+            "colorScheme": "One Half Dark",
             "compatibility.reloadEnvironmentVariables": true,
             "font": {
                 "face": "NotoSansM NFM"
             },
-            "opacity": 90,
+            "opacity": 98,
             "useAcrylic": false
         },
         "list": [
