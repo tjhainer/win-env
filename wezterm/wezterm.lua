@@ -4,5 +4,6 @@ local events = require("events")
 local config = wezterm.config_builder()
 
 helpers.apply_to_config(wezterm, config)
+events.apply(wezterm)
 
 return config

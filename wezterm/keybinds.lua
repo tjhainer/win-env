@@ -83,9 +83,6 @@ function module.apply_to_config(wezterm, config)
 		{ key = "N", mods = "ALT|SHIFT", action = act.SwitchWorkspaceRelative(1) },
 		{ key = "P", mods = "ALT|SHIFT", action = act.SwitchWorkspaceRelative(-1) },
 	}
-	wezterm.on("update-right-status", function(window, pane)
-		window:set_right_status(window:active_workspace())
-	end)
 end
 
 return module
